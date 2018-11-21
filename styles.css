@@ -1,0 +1,532 @@
+* {
+    color: black;
+    font-weight: bold;
+	font-family: 'Trajan Pro Regular';
+}
+/*animation is container*/
+/*I have commited this code though its not completely responsive as i have given sizes according to vw now i hhave to figure out something which will change height 
+and width of circles according to screen aspect ratio.*/ 
+
+@font-face {
+    font-family: Chapaza;
+    src: url(Chapaza.ttf);
+}
+@font-face {
+    font-family: Ikaros;
+    src: url(Ikaros-Light.otf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Regular.ttf);
+}
+@font-face{
+	font-family:luxia;
+	src: url(Luxia.ttf);
+}
+::-webkit-scrollbar {
+	display: none;
+	}
+
+body {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 16vw;
+	height: 4.5vw;
+	padding-left: 2vw;
+	position: absolute;
+	z-index: 15;
+}
+.container {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+
+.head {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-content: space-between;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-image: url("head background.svg");
+	background-size: cover;
+	height: 5vw;
+	width: 100vw;
+	overflow:hidden;
+	position: absolute;
+	z-index: 15;
+}
+
+
+.header {
+	font-size: 3.5vw;
+	color: #f1eef3;
+	font-family: Ikaros;
+	line-height: 1;
+	text-transform: uppercase;
+	padding: 1vw;
+	text-align: center;
+	padding-right: 4.5vw;
+	letter-spacing: 2px;
+}
+.contactButton {
+	font-size: 2.5vw;
+	color: white;
+	transition: 0.5s;
+	font-family: Ikaros;
+	padding: 1vw;
+	padding-right: 3vw;
+	text-align: center;
+
+}
+.contactButton:hover {
+	transform: scale(1.1);
+}
+
+
+.navButton{
+	position: absolute;
+	top: 85vh;
+	z-index: 5;
+	color: rgb(199, 79, 10);
+	font-size: 5vw;
+	transition: 0.5s;
+}
+#previous{
+	left: 30vw;
+}
+
+#next{
+	right: 30vw;
+}
+
+
+.animation{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;;
+    height: 100vh;
+    width: 100vw; 
+}
+
+.common{
+	border-radius: 50%;
+	background-size: cover;
+    display: inline-block;
+}
+
+.img1{
+	background-image: url("0.jpg");
+	background-size: cover;	
+}
+.img2{
+	background-image: url("4.jpg");
+	background-size: cover;
+}
+
+.img3{
+	background-image: url("1.jpg");
+	background-size: cover;
+}
+
+.img4{
+	background-image: url("2.jpg");
+	background-size: cover;
+}
+
+.noSelect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome and Opera */
+  
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent; 
+  }
+
+  
+
+#center{
+	position: absolute;
+	width: 30vw;
+	height: 30vw;
+	/*to center it  i have used left as margin and padding was not properly working*/
+	top: 15vh;
+	left: 30vw;
+	transition: 1s;
+	background-color: black;
+	z-index: 1;
+}
+
+#left{ 
+	position: absolute;
+	width: 25vw;
+	height: 25vw;
+	top: 30vh;
+	left: -10vw;
+	transition: 1s;
+	transform: rotate(-30deg);
+	background-color: black;
+	z-index: 1;
+	filter: grayscale(100%);
+}
+#right{       
+    position: absolute;
+	top: 30vh;
+	left: 77vw;
+	width: 20vw;
+	height: 20vw;
+	transition: 1s;
+	transform: rotate(30deg);
+	background-color: black;
+	z-index: 1;
+	filter: grayscale(100%);
+}
+#float{
+/*	this element is at bottom*/
+	position: absolute;
+	top: 30vh;
+	left: 115vw;
+	transition-duration: 1s;
+	transition-property: top, left, width, height;
+	width: 25vw;
+	height: 25vw;
+	background-color: black;
+	z-index: 1;
+}
+
+
+#breifDescription {
+	position: absolute;
+	top: 75vh;
+	left: 0;
+	width: 100vw;
+	text-align: center;
+}
+
+
+
+#close {
+	position: absolute;
+	top: 12vh;
+	right: 2vw;
+	z-index: 15;
+	width: 2vw;
+	background-color: rgba(0,0,0,0);
+	transition: 0.5s;
+	display: none;
+}
+
+.cursorChange{
+	cursor: pointer;
+}
+
+#contactDetails {
+	background-color: rgba(0, 0, 0, 0.875);
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+	z-index: 20;
+	display: none;
+	opacity: 0;
+	transition: 0.5s;
+    padding-top: 6.75vh;
+}
+#contactDetails h1 {
+	color: white;
+	font-size: 3vw;
+	font-family: Roboto;
+}
+
+#contactDetails h2 {
+	color: white;
+	font-size: 2.3vw;
+	font-family: Roboto;
+}
+h3 {
+	color: rgb(33, 7, 79);
+	font-size: 3.5vw;
+	font-family: Chapaza;
+	opacity: 0;
+	transition: 1s;
+	line-height: 0;
+}
+
+h4 {
+	color: rgb(34, 31, 31);
+	font-size: 1.8vw;
+	font-family: Roboto;
+	opacity:0;
+	transition: 1s;
+	position: relative;
+	top: -6vh;
+}
+.details h4
+{
+	color:black;
+	opacity:1;
+}
+
+#closeContactDetails {
+	position: absolute;
+	top: 3vh;
+	right: 3vw;
+	z-index: 15;
+	width: 2vw;
+	background-color: rgba(0,0,0,0);
+	transition: 0.5s;
+	display: none;
+}
+
+
+a {
+	color: white;
+	transition: 0.2s;
+	text-decoration: underline;
+	font-family: Roboto;
+}
+a:hover {
+	color: rgb(189, 10, 10);
+}
+
+#detailsBackground {
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	display: none;
+	opacity: 0;
+	transition: all 0.3s linear;
+
+}
+#textDetails
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60vw;
+	height: 100vh;
+	float: right;
+}
+#description
+{
+	align-self: center;
+	color: white;
+	width:40vw;
+	text-align: center;
+	height:70vh;
+	opacity: 0;
+	transition: 0.5s;
+	padding-top: 15vh;
+}
+#description div:first-child
+{
+	font-size: 4vw;
+	font-family: Chapaza;
+	color: rgb(33, 7, 79);
+}
+#description div:nth-child(2n)
+{  font-size: 2vw;
+	color: rgb(34, 31, 31);
+	font-family: Roboto;
+	padding-top:3vh;
+
+}
+#description div:last-child
+{  font-size: 1.5vw;
+	color: rgb(122, 120, 120);
+   font-family: Roboto;
+   padding-top: 3vh;
+   overflow: auto;
+   height: 40vh;
+}
+
+
+
+/*changes for mobile*/
+@media (max-width: 500px) 
+{    
+	.container {
+		margin: 0;
+		height: 100vh;
+		width: 100vw;
+		background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	}
+	.contactButton {
+		position: absolute;
+		top: 92vh;
+		left: 35vw;
+		width: 25vw;
+		font-size: 3vw;
+		padding: 2vh;
+		background-image: url("contact button background.svg");
+		background-color: rgba(0,0,0,0);
+		background-size: cover;
+		transition: 0.5s;
+	}
+	.contactButton:hover {
+		color: white;
+		background-color: rgba(0,0,0,0);
+	}
+	.contactIcon {
+		font-size: 5vw;
+	}
+	.head {
+		height: 12vw;
+		background-image: url("head background.svg");
+		background-size: cover;
+		width: 100vw;
+		position: initial;
+	}
+	.header {
+		position: absolute;
+		top: 20vw;
+		left: 17vw;
+		padding: 0;
+		color: rgb(33, 7, 79);
+		font-size: 10vw;
+		
+	}
+	#close {
+		display: none;
+	}
+	img {
+		top: 0;
+		left: 15vw;
+		width: 70vw;
+		height: 9.25vw;
+		padding-top: 0.75vh;
+
+	}
+	.navButton {
+		position: absolute;
+		top: 61vh;
+		font-size: 10vw;
+	}
+	#next {
+		right: 10vw;
+		z-index: 3;
+	}
+	#previous {
+		left: 10vw;
+		z-index: 3;
+	}
+	#contactDetails h1 {
+		font-size: 6.5vw;
+	}
+	#contactDetails h2 {
+		font-size: 5vw;
+	}
+	h3 {
+		font-size: 5vw;
+	}
+	h4 {
+		font-size: 3vw;
+	}
+	#contactDetails {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+        padding-top: 20.5vh;
+	}
+	#closeContactDetails {
+		position: absolute;
+		top: 1vh;
+		left: 88vw;
+		width: 5vw;
+		z-index: 15; 
+	}
+	#center {
+		filter: grayscale(0);
+		z-index: 3;
+	}
+	#right {
+		filter: grayscale(0);
+		z-index: 3;
+	}
+	#left {
+		filter: grayscale(0);
+		z-index: 3;
+	}
+	#float {
+		filter: grayscale(0);
+	}
+	
+	#detailsBackground
+	{
+	display: block;
+    background: transparent;
+	width: 75vw;
+	height: 37.5vh;
+	position: absolute;
+	top: 55vh;
+	left: 13vw;
+	z-index: 0;
+	}
+	#textDetails
+	{
+	position: absolute;
+	display: block;
+	width: 75vw;
+	height: 37.5vh;
+	right: 0;
+	top:0;
+	padding:0;
+	background-color: transparent;
+	z-index: 0;
+	}
+	#description
+	{
+	align-items: center;
+	left: 0vw;
+	top: 1.5vh;
+	position: relative;
+	width: 75vw;
+	text-align: center;
+	height: 38vh;
+	padding-top:0;
+	z-index: 0;
+	}
+
+	#description div:first-child
+	{
+	font-size: 6.25vw;
+	color: rgb(33, 7, 79);
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	}
+	#description div:nth-child(2n)
+	{ 
+	font-size: 4vw;
+	color: rgb(34, 31, 31);
+	padding-top:2vh;
+	letter-spacing: 1px;
+
+	}
+	#description div:last-child 
+	{  
+	font-size: 3vw;
+	color: rgb(122, 120, 120);
+	padding-top: 1vh;
+	overflow: auto;
+	height: 20vh;
+	}
+}
+
