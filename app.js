@@ -19,7 +19,7 @@ var profShows=
 {
     name_Of_Event:["Hindi ProfShow","English ProfShow","EDM Night","N2O","Classical ProfShow"],
     details: {
-    	name_Of_Artist:["Shankar-Ehsaan-Loy", "Dan Deacon", "Nucleya", "Biswa Kalyan Rath", "Abhishek Raghuram"],
+    	name_Of_Artist:["Sunidhi Chauhan", "Dan Deacon", "Nucleya", "Biswa Kalyan Rath", "Abhishek Raghuram"],
     	date:["21st October","20th October","22nd October","23rd October","21st October"],
     	time:["8:30 PM","8:30 PM","10:30 PM","7:00 PM"," 6:30 PM"],
     	venue:["SR Grounds","Main Audi","SR  Grounds","Main Audi","Main Audi"]
