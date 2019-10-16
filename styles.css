@@ -33,6 +33,10 @@ body {
 	padding: 0;
 }
 
+b {
+	font-family: 'Roboto';
+}
+
 img {
 	width: 16vw;
 	height: 4.5vw;
