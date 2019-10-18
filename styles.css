@@ -38,7 +38,7 @@ b {
 }
 
 img {
-	width: 16vw;
+	width: 12vw;
 	height: 4.5vw;
 	padding-left: 2vw;
 	position: absolute;
@@ -396,6 +396,7 @@ a:hover {
 		background-size: cover;
 		width: 100vw;
 		position: initial;
+		height: 16vw;
 	}
 	.header {
 		position: absolute;
@@ -410,12 +411,10 @@ a:hover {
 		display: none;
 	}
 	img {
-		top: 0;
-		left: 15vw;
-		width: 70vw;
-		height: 9.25vw;
-		padding-top: 0.75vh;
-
+		left: 25vw;
+		width: 50vw;
+		height: 14vw;
+		padding-top: 0;
 	}
 	.navButton {
 		position: absolute;
